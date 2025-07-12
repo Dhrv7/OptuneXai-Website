@@ -122,8 +122,10 @@ function App() {
           </div>
        </div>
 
-  {/* Mobile Menu */}
-  {isMenuOpen && (
+
+{isMenuOpen && (
+  <>
+    {/* Mobile Menu */}
     <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20">
     <div className="px-4 py-6 space-y-4">
       <a href="#features" className="block text-gray-300 hover:text-purple-400 transition-colors">Features</a>
