@@ -1,9 +1,8 @@
 
-// vite.config.ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: './', // <== This is the fix
   plugins: [react()],
-  base: './', // <<< This is critical for Netlify CSS/JS path resolution
 })
