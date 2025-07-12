@@ -122,7 +122,6 @@ function App() {
           </div>
        </div>
 
-<>
   {/* Mobile Menu */}
   {isMenuOpen && (
     <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20">
