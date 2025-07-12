@@ -110,24 +110,23 @@ function App() {
   </a>
 </div>
 
-{/* Mobile Menu Button */}
-<div>
-  <button 
-    className="md:hidden text-white"
+{/* Mobile Menu Button and Conditional Menu */}
+<div className="md:hidden">
+  <button
+    className="text-white"
     onClick={() => setIsMenuOpen(!isMenuOpen)}
   >
     {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
   </button>
 
-  {/* Mobile Menu */}
   {isMenuOpen && (
-    <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20 mt-4">
+    <div className="bg-black/95 backdrop-blur-xl border-t border-purple-500/20 mt-4">
       <div className="px-4 py-6 space-y-4">
         <a href="#features" className="block text-gray-300 hover:text-purple-400 transition-colors">Features</a>
         <a href="#solutions" className="block text-gray-300 hover:text-purple-400 transition-colors">Solutions</a>
         <a href="#pricing" className="block text-gray-300 hover:text-purple-400 transition-colors">Pricing</a>
         <a href="#testimonials" className="block text-gray-300 hover:text-purple-400 transition-colors">Reviews</a>
-        
+
         <div className="pt-4 space-y-3">
           <a href="https://wa.link/32be5y" target="_blank" rel="noopener noreferrer">
             <button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-medium">
@@ -144,6 +143,7 @@ function App() {
     </div>
   )}
 </div>
+
 
 
       {/* Hero Section */}
