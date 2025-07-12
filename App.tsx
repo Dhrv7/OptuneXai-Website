@@ -112,6 +112,7 @@ function App() {
 
 
             {/* Mobile Menu Button */}
+      <div>
             <button 
               className="md:hidden text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
