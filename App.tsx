@@ -74,22 +74,20 @@ function App() {
       <div className="custom-cursor"></div>
       <div className="custom-cursor-dot"></div>
 
-      {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-black/80 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
-          : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center mr-3">
-                <Bot className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                OptuneXAI
-              </span>
-            </div>
+      
+
+    <div className="flex items-center">
+  <div className="w-10 h-10 mr-3">
+    <img
+      src="https://jmp.sh/Kj2FpSgisEDWoPnrENnd"
+      alt="OptuneXAI Logo"
+      className="h-full w-full object-contain"
+    />
+  </div>
+  <span className="text-2xl font-bold bg-white bg-clip-text text-transparent">
+    OptuneXAI
+  </span>
+</div>
             
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
@@ -99,14 +97,19 @@ function App() {
               <a href="#testimonials" className="text-gray-300 hover:text-purple-400 transition-colors">Reviews</a>
             </div>
 
-            <div className="hidden md:flex items-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-medium hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
-                🔥 Free Demo
-              </button>
-              <button className="border border-purple-500 text-purple-400 px-6 py-3 rounded-xl font-medium hover:bg-purple-500/10 transition-all duration-300">
-                📞 Book Call
-              </button>
-            </div>
+<div className="hidden md:flex items-center space-x-4">
+  <a href="https://wa.link/32be5y" target="_blank" rel="noopener noreferrer">
+    <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-medium hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+      🔥 Free Demo
+    </button>
+  </a>
+  <a href="https://calendly.com/dhruvgupta-me/1hr" target="_blank" rel="noopener noreferrer">
+    <button className="border border-purple-500 text-purple-400 px-6 py-3 rounded-xl font-medium hover:bg-purple-500/10 transition-all duration-300">
+      📞 Book Call
+    </button>
+  </a>
+</div>
+
 
             {/* Mobile Menu Button */}
             <button 
@@ -119,25 +122,30 @@ function App() {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20">
-            <div className="px-4 py-6 space-y-4">
-              <a href="#features" className="block text-gray-300 hover:text-purple-400 transition-colors">Features</a>
-              <a href="#solutions" className="block text-gray-300 hover:text-purple-400 transition-colors">Solutions</a>
-              <a href="#pricing" className="block text-gray-300 hover:text-purple-400 transition-colors">Pricing</a>
-              <a href="#testimonials" className="block text-gray-300 hover:text-purple-400 transition-colors">Reviews</a>
-              <div className="pt-4 space-y-3">
-                <button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-medium">
-                  🔥 Free Demo
-                </button>
-                <button className="w-full border border-purple-500 text-purple-400 px-6 py-3 rounded-xl font-medium">
-                  📞 Book Call
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </nav>
+{isMenuOpen && (
+  <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20">
+    <div className="px-4 py-6 space-y-4">
+      <a href="#features" className="block text-gray-300 hover:text-purple-400 transition-colors">Features</a>
+      <a href="#solutions" className="block text-gray-300 hover:text-purple-400 transition-colors">Solutions</a>
+      <a href="#pricing" className="block text-gray-300 hover:text-purple-400 transition-colors">Pricing</a>
+      <a href="#testimonials" className="block text-gray-300 hover:text-purple-400 transition-colors">Reviews</a>
+      
+      <div className="pt-4 space-y-3">
+        <a href="https://wa.link/32be5y" target="_blank" rel="noopener noreferrer">
+          <button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-medium">
+            🔥 Free Demo
+          </button>
+        </a>
+        <a href="https://calendly.com/dhruvgupta-me/1hr" target="_blank" rel="noopener noreferrer">
+          <button className="w-full border border-purple-500 text-purple-400 px-6 py-3 rounded-xl font-medium">
+            📞 Book Call
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+)}
+
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -170,15 +178,20 @@ function App() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start">
-                <button className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center justify-center">
-                  🔥 Start Free Demo
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="group border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300 flex items-center justify-center">
-                  📞 Discovery Call
-                  <Phone className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                </button>
-              </div>
+  <a href="https://wa.link/32be5y" target="_blank" rel="noopener noreferrer">
+    <button className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center justify-center">
+      🔥 Start Free Demo
+      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+    </button>
+  </a>
+  <a href="https://calendly.com/dhruvgupta-me/1hr" target="_blank" rel="noopener noreferrer">
+    <button className="group border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300 flex items-center justify-center">
+      📞 Discovery Call
+      <Phone className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+    </button>
+  </a>
+</div>
+
               
               <div className="flex items-center justify-center lg:justify-start space-x-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
@@ -704,131 +717,7 @@ function App() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-radial from-purple-600/20 via-transparent to-transparent"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              <span className="text-white">Simple, Transparent</span>
-              <br />
-              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Pricing</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your practice. All plans include 30-day money-back guarantee.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                name: "Starter",
-                price: "$297",
-                period: "/month",
-                description: "Perfect for solo practitioners",
-                features: [
-                  "Up to 500 conversations/month",
-                  "WhatsApp integration",
-                  "Basic CRM sync",
-                  "Email support",
-                  "Standard templates"
-                ],
-                popular: false,
-                gradient: "from-gray-800 to-gray-900",
-                border: "border-gray-700"
-              },
-              {
-                name: "Professional",
-                price: "$597",
-                period: "/month",
-                description: "Most popular for growing firms",
-                features: [
-                  "Up to 2,000 conversations/month",
-                  "Advanced WhatsApp features",
-                  "Full CRM integration",
-                  "Priority support",
-                  "Custom AI training",
-                  "Analytics dashboard",
-                  "Multi-language support"
-                ],
-                popular: true,
-                gradient: "from-purple-600 to-purple-700",
-                border: "border-purple-500"
-              },
-              {
-                name: "Enterprise",
-                price: "$1,297",
-                period: "/month",
-                description: "For large immigration firms",
-                features: [
-                  "Unlimited conversations",
-                  "White-label solution",
-                  "Advanced integrations",
-                  "Dedicated support manager",
-                  "Custom development",
-                  "Advanced analytics",
-                  "Team collaboration tools",
-                  "API access"
-                ],
-                popular: false,
-                gradient: "from-blue-600 to-blue-700",
-                border: "border-blue-500"
-              }
-            ].map((plan, index) => (
-              <div key={index} className={`relative bg-gradient-to-br ${plan.gradient} rounded-3xl p-8 border ${plan.border} ${plan.popular ? 'scale-105 shadow-2xl shadow-purple-500/25' : ''} hover:transform hover:scale-105 transition-all duration-300`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-6 py-2 rounded-full text-sm font-bold">
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">{plan.period}</span>
-                  </div>
-                </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-200">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`w-full py-4 rounded-2xl font-semibold text-lg transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-white text-purple-600 hover:bg-gray-100' 
-                    : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>
-                  Start Free Trial
-                </button>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <p className="text-gray-400 mb-4">All plans include 14-day free trial • No setup fees • Cancel anytime</p>
-            <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
-              <div className="flex items-center">
-                <Shield className="h-4 w-4 mr-1" />
-                <span>SOC 2 Compliant</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="h-4 w-4 mr-1" />
-                <span>99.9% Uptime</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    
       {/* FAQ Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-black/50"></div>
@@ -900,28 +789,32 @@ function App() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <button className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center justify-center">
-              🔥 Start Your Free Trial
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
-            </button>
-            <button className="group border-2 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center">
-              💬 Chat on WhatsApp
-              <MessageCircle className="ml-3 h-6 w-6 group-hover:scale-110 transition-transform" />
-            </button>
-          </div>
+  <a href="https://calendly.com/dhruvgupta-me/1hr" target="_blank" rel="noopener noreferrer">
+    <button className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center justify-center">
+      🔥 Start Your Free Trial
+      <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+    </button>
+  </a>
+  <a href="https://wa.link/32be5y" target="_blank" rel="noopener noreferrer">
+    <button className="group border-2 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center">
+      💬 Chat on WhatsApp
+      <MessageCircle className="ml-3 h-6 w-6 group-hover:scale-110 transition-transform" />
+    </button>
+  </a>
+</div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-2 text-gray-400">
               <CheckCircle className="h-5 w-5 text-green-400" />
-              <span>14-day free trial</span>
+              <span>24*7 Support</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-gray-400">
               <CheckCircle className="h-5 w-5 text-green-400" />
-              <span>No setup fees</span>
+              <span>1 setup fees</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-gray-400">
               <CheckCircle className="h-5 w-5 text-green-400" />
-              <span>Cancel anytime</span>
+              <span>300% ROI</span>
             </div>
           </div>
         </div>
@@ -936,7 +829,7 @@ function App() {
                 <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center mr-3">
                   <Bot className="h-6 w-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
                   OptuneXAI
                 </span>
               </div>
@@ -953,7 +846,7 @@ function App() {
               <h4 className="font-bold text-white mb-6">Product</h4>
               <ul className="space-y-3 text-gray-400">
                 <li><a href="#features" className="hover:text-purple-400 transition-colors">Features</a></li>
-                <li><a href="#pricing" className="hover:text-purple-400 transition-colors">Pricing</a></li>
+                <li><a href="#pricing" className="hover:text-purple-400 transition-colors">About Us</a></li>
                 <li><a href="#" className="hover:text-purple-400 transition-colors">Integrations</a></li>
                 <li><a href="#" className="hover:text-purple-400 transition-colors">API Documentation</a></li>
                 <li><a href="#" className="hover:text-purple-400 transition-colors">Security</a></li>
@@ -965,7 +858,7 @@ function App() {
               <ul className="space-y-3 text-gray-400">
                 <li><a href="#" className="hover:text-purple-400 transition-colors">Help Center</a></li>
                 <li><a href="#" className="hover:text-purple-400 transition-colors">Contact Support</a></li>
-                <li><a href="#" className="hover:text-purple-400 transition-colors">Book Demo</a></li>
+                <li><a href="https://calendly.com/dhruvgupta-me/1hr" className="hover:text-purple-400 transition-colors">Book Demo</a></li>
                 <li><a href="#" className="hover:text-purple-400 transition-colors">Training Resources</a></li>
                 <li><a href="#" className="hover:text-purple-400 transition-colors">Status Page</a></li>
               </ul>
@@ -977,22 +870,22 @@ function App() {
                 <li className="flex items-center">
                   <Mail className="h-4 w-4 mr-2" />
                   <a href="mailto:support@optunexai.com" className="hover:text-purple-400 transition-colors">
-                    support@optunexai.com
+                    optunexai@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center">
                   <Phone className="h-4 w-4 mr-2" />
                   <a href="tel:+15551234567" className="hover:text-purple-400 transition-colors">
-                    +1 (555) 123-4567
+                    +91 9752528577
                   </a>
                 </li>
                 <li className="flex items-center">
                   <MapPin className="h-4 w-4 mr-2" />
-                  <span>Toronto, Canada</span>
+                  <span>Navlakha, Indore</span>
                 </li>
                 <li className="flex items-center">
                   <MessageCircle className="h-4 w-4 mr-2" />
-                  <a href="#" className="hover:text-purple-400 transition-colors">
+                  <a href="https://wa.link/32be5y" className="hover:text-purple-400 transition-colors">
                     WhatsApp Support
                   </a>
                 </li>
