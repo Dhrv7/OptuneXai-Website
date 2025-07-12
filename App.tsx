@@ -110,44 +110,40 @@ function App() {
   </a>
 </div>
 
+{/* Mobile Menu Button */}
+<div>
+  <button 
+    className="md:hidden text-white"
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+  >
+    {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+  </button>
 
-            {/* Mobile Menu Button */}
-      <div>
-            <button 
-              className="md:hidden text-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+  {/* Mobile Menu */}
+  {isMenuOpen && (
+    <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20 mt-4">
+      <div className="px-4 py-6 space-y-4">
+        <a href="#features" className="block text-gray-300 hover:text-purple-400 transition-colors">Features</a>
+        <a href="#solutions" className="block text-gray-300 hover:text-purple-400 transition-colors">Solutions</a>
+        <a href="#pricing" className="block text-gray-300 hover:text-purple-400 transition-colors">Pricing</a>
+        <a href="#testimonials" className="block text-gray-300 hover:text-purple-400 transition-colors">Reviews</a>
+        
+        <div className="pt-4 space-y-3">
+          <a href="https://wa.link/32be5y" target="_blank" rel="noopener noreferrer">
+            <button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-medium">
+              🔥 Free Demo
             </button>
-          </div>
-       </div>
-
-
-{isMenuOpen && (
-  <>
-    {/* Mobile Menu */}
-    <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20">
-    <div className="px-4 py-6 space-y-4">
-      <a href="#features" className="block text-gray-300 hover:text-purple-400 transition-colors">Features</a>
-      <a href="#solutions" className="block text-gray-300 hover:text-purple-400 transition-colors">Solutions</a>
-      <a href="#pricing" className="block text-gray-300 hover:text-purple-400 transition-colors">Pricing</a>
-      <a href="#testimonials" className="block text-gray-300 hover:text-purple-400 transition-colors">Reviews</a>
-      
-      <div className="pt-4 space-y-3">
-        <a href="https://wa.link/32be5y" target="_blank" rel="noopener noreferrer">
-          <button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-medium">
-            🔥 Free Demo
-          </button>
-        </a>
-        <a href="https://calendly.com/dhruvgupta-me/1hr" target="_blank" rel="noopener noreferrer">
-          <button className="w-full border border-purple-500 text-purple-400 px-6 py-3 rounded-xl font-medium">
-            📞 Book Call
-          </button>
-        </a>
+          </a>
+          <a href="https://calendly.com/dhruvgupta-me/1hr" target="_blank" rel="noopener noreferrer">
+            <button className="w-full border border-purple-500 text-purple-400 px-6 py-3 rounded-xl font-medium">
+              📞 Book Call
+            </button>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-)}
+  )}
+</div>
 
 
       {/* Hero Section */}
