@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './index.css';
 import { 
   MessageCircle, 
   Phone, 
@@ -38,6 +39,8 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
+
+
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
