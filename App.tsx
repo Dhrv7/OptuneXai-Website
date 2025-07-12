@@ -120,11 +120,12 @@ function App() {
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-        </div>
+       </div>
 
-        {/* Mobile Menu */}
-{isMenuOpen && (
-  <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20">
+<>
+  {/* Mobile Menu */}
+  {isMenuOpen && (
+    <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20">
     <div className="px-4 py-6 space-y-4">
       <a href="#features" className="block text-gray-300 hover:text-purple-400 transition-colors">Features</a>
       <a href="#solutions" className="block text-gray-300 hover:text-purple-400 transition-colors">Solutions</a>
