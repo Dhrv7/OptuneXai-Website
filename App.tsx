@@ -68,27 +68,32 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return (
-    <div className="min-h-screen bg-black text-white font-poppins overflow-x-hidden">
-      {/* Custom Cursor */}
-      <div className="custom-cursor"></div>
-      <div className="custom-cursor-dot"></div>
 
-      
+return (
+  <div className="min-h-screen bg-black text-white font-poppins overflow-x-hidden">
+    {/* Custom Cursor */}
+    <div className="custom-cursor"></div>
+    <div className="custom-cursor-dot"></div>
 
-    <div className="flex items-center">
-  <div className="w-10 h-10 mr-3">
-    <img
-      src="https://jmp.sh/Kj2FpSgisEDWoPnrENnd"
-      alt="OptuneXAI Logo"
-      className="h-full w-full object-contain"
-    />
-  </div>
-  <span className="text-2xl font-bold bg-white bg-clip-text text-transparent">
-    OptuneXAI
-  </span>
-</div>
-            
+    {/* Navigation Header Start */}
+    <header className="fixed top-0 left-0 w-full z-50 px-4 py-5 flex items-center justify-between bg-black/80 backdrop-blur-xl border-b border-purple-500/20">
+      <div className="flex items-center">
+        <div className="w-10 h-10 mr-3">
+          <img
+            src="https://jmp.sh/Kj2FpSgisEDWoPnrENnd"
+            alt="OptuneXAI Logo"
+            className="h-full w-full object-contain"
+          />
+        </div>
+        <span className="text-2xl font-bold bg-white bg-clip-text text-transparent">
+          OptuneXAI
+        </span>
+      </div>
+
+      {/* ...rest of nav/menu/buttons goes here */}
+
+
+ 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-300 hover:text-purple-400 transition-colors">Features</a>
